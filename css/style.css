@@ -13,15 +13,32 @@ h2{margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}
 .btn:hover{border-color:var(--accent)}
 .small{color:var(--muted);font-size:13px}
 
-
-:root{
+/* Dark Background */
+/* :root{
   --fg:#ffffff;
   --bg:#000000;
   --muted:rgba(255,255,255,.7);
   --hover:rgba(255,255,255,.15); /* low-opacity white on hover */
   --navH:78px;
   --navH-shrink:54px;
+} */
+
+/* Light Backgroud */
+:root{
+  --fg:#111;             /* text color */
+  --bg:#ffffff;          /* background */
+  --muted:#666;          /* muted text */
+  --hover:rgba(0,0,0,.07);
+  --navH:78px;
+  --navH-shrink:54px;
 }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+}
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -95,8 +112,24 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
 .scroll-hint{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);text-decoration:none;color:var(--muted);font-size:28px}
 
 /* CONTENT */
-.section{max-width:1000px;margin:0 auto;padding:80px 24px}
-.section h2{margin:0 0 8px 0;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:6px}
+/* Dark Backgroud */
+/* .section{max-width:1000px;margin:0 auto;padding:80px 24px}
+.section h2{margin:0 0 8px 0;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:6px} */
+
+/* Light Background */
+.section{
+  max-width:1000px;
+  margin:0 auto;
+  padding:80px 24px;
+  background:var(--bg);
+  color:var(--fg);
+}
+.section h2{
+  margin:0 0 8px 0;
+  border-bottom:1px solid rgba(0,0,0,.1);
+  padding-bottom:6px;
+}
+
 
 
 
