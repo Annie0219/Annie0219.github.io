@@ -247,19 +247,24 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
 }
 
 .about-photo {
-  flex: 0 0 280px;
+  flex: 0 0 340px;
   display: flex;
   justify-content: center;
 }
 
 .about-photo img {
   width: 100%;
-  max-width: 260px;        /* Limit width */
+  max-width: 320px;        /* Limit width */
   height: auto;            /* Preserve aspect ratio */
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   object-fit: cover;
-  aspect-ratio: 3 / 4;     /* Keep portrait shape */
+  aspect-ratio: 2 / 3;     /* Keep portrait shape */
+}
+
+/* Reduce space between About & Publications */
+.about-section {
+  margin-bottom: 0;      /* remove large spacing below About */
 }
 
 /* Responsive collapse for small screens */
@@ -270,13 +275,19 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   }
   .about-photo {
     margin-bottom: 1rem;
+    margin-top: 1.5rem;    /* tighter connection with About */
+    padding-top: 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-/* === PUBLICATIONS === */
+/* === PUBLICATIONS SECTION === */
 .pubs-section {
   max-width: 1100px;
-  margin: 3rem auto 0;
+  margin: 1.5rem auto 0;   /* reduced top margin */
+  padding-top: 0;
 }
 
 .pubs-section h2 {
@@ -286,9 +297,24 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   padding-bottom: 0.5rem;
 }
 
+/* Individual publication entries */
 .pub {
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+.pub strong {
+  font-weight: 600;
+}
+
+.pub em {
+  color: #555;
+  font-style: italic;
+}
+
+/* Tighten spacing below About photo & Publications */
+.section + .pubs-section {
+  margin-top: 1rem;
 }
 
 
