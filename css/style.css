@@ -383,4 +383,26 @@ h1, h2, h3, h4, h5, h6, .brand {
   }
 }
 
+.about-info {
+  text-align: center;
+  /* margin-top: 14px; */
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.about-info .name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111; /* black text like name headers */
+  margin-bottom: 4px;
+}
+
+.about-info .subtitle {
+  font-size: 1rem;
+  color: #777; /* light grey text */
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+
 
