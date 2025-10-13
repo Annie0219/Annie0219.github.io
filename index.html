@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yangyang Li</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header id="nav" class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#">Yangyang Li</a>
+      <nav class="menu" aria-label="Primary">
+        <ul>
+          <li><a href="#">Home</a></li>
+
+          <li class="has-sub">
+            <a href="#news">News</a>
+            <ul class="sub">
+              <li><a href="#news">Latest</a></li>
+              <li><a href="#talks">Talks</a></li>
+              <li><a href="#awards">Awards</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="#papers">Papers</a>
+            <ul class="sub">
+              <li><a href="#papers">Publications</a></li>
+              <li><a href="#preprints">Preprints</a></li>
+              <li><a href="#code">Code & Datasets</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- mobile hamburger -->
+      <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO VIDEO -->
+  <section class="hero" aria-label="Intro">
+    <video class="hero-video" autoplay muted loop playsinline poster="media/hero.jpg">
+      <source src="media/hero.mp4" type="video/mp4" />
+      <!-- Fallback image shown by poster -->
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-center">
+      <h1 class="hero-title" id="typer">I optimize intelligence.</h1>
+    </div>
+
+    <a href="#content" class="scroll-hint" aria-label="Scroll">
+      <span>▾</span>
+    </a>
+  </section>
+
+  <!-- BELOW THE FOLD CONTENT (stub) -->
+  <main id="content">
+    <section id="news" class="section"><h2>News</h2><p>…</p></section>
+    <section id="papers" class="section"><h2>Papers</h2><p>…</p></section>
+    <section id="about" class="section"><h2>About</h2><p>…</p></section>
+    <section id="contact" class="section"><h2>Contact</h2><p>you@mit.edu</p></section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
