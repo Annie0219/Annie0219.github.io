@@ -271,6 +271,7 @@ h1, h2, h3, h4, h5, h6, .brand {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 6px; /* Adds spacing before abstract */
 }
 
 /* Mini Buttons */
@@ -305,7 +306,7 @@ label.btn-mini {
 .abstract-box {
   display: none;
   margin-top: 0.8rem;
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1rem;
   border: 1px dashed #999;
   border-radius: 6px;
   background-color: #fafafa;
@@ -314,14 +315,21 @@ label.btn-mini {
   animation: fadeIn 0.25s ease-in-out;
 }
 
+/* Show when ABS clicked */
 .abs-checkbox:checked + .abstract-box {
   display: block;
 }
 
 /* Smooth fade animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === PUBLICATIONS SECTION === */
@@ -345,6 +353,9 @@ label.btn-mini {
   }
   .pub-thumb {
     width: 100px;
+    height: 72px;
+  }
+}
 
 
 
