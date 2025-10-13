@@ -351,19 +351,19 @@ h1, h2, h3, h4, h5, h6, .brand {
   margin-top: 16px;
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 24px;
   width: 100%;
 }
 
 .contact-icons a {
   color: #7b1c1c; /* deep academic red */
-  font-size: 26px;
+  font-size: 40px;
   transition: all 0.3s ease;
 }
 
 .contact-icons a:hover {
   color: #b30000;        /* brighter red on hover */
-  transform: translateY(-3px); /* subtle lift animation */
+  transform: scale(1.15) translateY(-3px); /* subtle lift animation */
 }
 
 
