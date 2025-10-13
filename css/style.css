@@ -43,14 +43,14 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   left: 0;
   right: 0;
   z-index: 50;
-  height: var(--navH);
+  height: 80px;
   background: transparent;
   transition: height .25s ease, background-color .25s ease, box-shadow .25s ease;
 }
 
 /* turns solid black once user scrolls past the hero */
 .nav.solid {
-  height: var(--navH-shrink);
+  height: 70px;
   background: rgba(0, 0, 0, .9);
   box-shadow: 0 1px 0 rgba(255, 255, 255, .06);
 }
@@ -71,6 +71,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   font-weight: 800;
   letter-spacing: .8px;
   font-size: 36px;
+  line-height: 1;
   transition: transform .25s ease, opacity .25s ease;
 }
 
