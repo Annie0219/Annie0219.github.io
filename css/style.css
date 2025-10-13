@@ -27,8 +27,8 @@ h2{margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}
 :root{
   --fg:#111;             /* text color */
   --bg:#ffffff;          /* background */
-  --muted:#666;          /* muted text */
-  --hover:rgba(0,0,0,.07);
+  --muted:rgba(255,255,255,.7);
+  --hover:rgba(255,255,255,.15); /* low-opacity white on hover */
   --navH:78px;
   --navH-shrink:54px;
 }
@@ -45,34 +45,84 @@ html,body{height:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial}
 
 /* NAV */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  height:var(--navH);
-  background:transparent;
-  transition:height .25s ease, background-color .25s ease, box-shadow .25s ease;
+/* --- NAV BAR --- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--navH);
+  background: transparent;
+  transition: height .25s ease, background-color .25s ease, box-shadow .25s ease;
 }
-.nav.shrink{
-  height:var(--navH-shrink);
-  background:rgba(0,0,0,.9);
-  box-shadow:0 1px 0 rgba(255,255,255,.06);
+
+/* turns solid black once user scrolls past the hero */
+.nav.solid {
+  height: var(--navH-shrink);
+  background: rgba(0, 0, 0, .9);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06);
 }
-.nav-inner{
-  max-width:1200px;margin:auto;height:100%;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 20px;
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
-.brand{
-  color:#fff;text-decoration:none;font-weight:800;letter-spacing:.5px;
-  font-size:28px;transition:transform .25s ease, opacity .25s ease;
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: .5px;
+  font-size: 28px;
+  transition: transform .25s ease, opacity .25s ease;
 }
-.nav.shrink .brand{transform:translateY(0) scale(.92);opacity:.9}
-.menu ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
-.menu a{
-  display:block;padding:10px 16px;border-radius:4px;
-  color:#fff;text-decoration:none;letter-spacing:.3px;
+
+.nav.solid .brand {
+  transform: translateY(0) scale(.92);
+  opacity: .9;
 }
-.menu > ul > li{position:relative}
-.menu > ul > li > a:hover{background:var(--hover)}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .3px;
+}
+
+.menu > ul > li {
+  position: relative;
+}
+
+:root {
+  --hover: rgba(255, 255, 255, .15);
+}
+
+.menu > ul > li > a:hover {
+  background: var(--hover);
+}
+
+/* --- HERO TEXT (middle sentence) --- */
+.hero-title {
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .45);
+}
+
 .has-sub .sub{
   position:absolute;top:100%;left:0;min-width:220px;
   background:rgba(0,0,0,.85);backdrop-filter:saturate(120%) blur(2px);
@@ -104,6 +154,11 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
 .hero-overlay{
   position:absolute;inset:0;
   background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55));
+}
+/* make the hero sentence white */
+.hero-title{
+  color:#fff;                 /* was inheriting dark text */
+  text-shadow:0 2px 16px rgba(0,0,0,.45); /* readability */
 }
 .hero-center{
   position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 20px;
