@@ -270,7 +270,9 @@ h1, h2, h3, h4, h5, h6, .brand {
   flex: 0 0 300px;
   margin-left:-10px;       /* subtle nudge left */
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* ensures icons stay below image */
+  align-items: center;    /* center image + icons */
+  justify-content: flex-start;  /* ensures icons stay below image */
 }
 
 .about-photo img {
@@ -282,6 +284,7 @@ h1, h2, h3, h4, h5, h6, .brand {
   object-fit: cover;
   aspect-ratio: 2 / 3;     /* Keep portrait shape */
   transition: all 0.25s ease-in-out;
+    margin-bottom: 12px;          /* adds space before icons */
 }
 
 /* Responsive collapse for small screens */
@@ -362,5 +365,21 @@ h1, h2, h3, h4, h5, h6, .brand {
   transform: translateY(-3px); /* subtle lift animation */
 }
 
+
+/* Responsive stacking for smaller screens */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-photo {
+    margin-left: 0;
+  }
+
+  .about-photo img {
+    max-width: 280px;
+  }
+}
 
 
