@@ -29,7 +29,7 @@
           <li class="has-sub">
             <a href="#papers">Papers</a>
             <ul class="sub">
-              <li><a href="#papers">Publications</a></li>
+              <li><a href="#publications">Publications</a></li>
               <li><a href="#preprints">Preprints</a></li>
               <li><a href="#code">Code &amp; Datasets</a></li>
             </ul>
@@ -66,52 +66,110 @@
       <p>…</p>
     </section>
 
-    <section id="papers" class="section">
-      <h2>Papers</h2>
-      <p>…</p>
+    <section id="about" class="section about-section">
+      <div class="about-container">
+        <div class="about-photo">
+            <img src="img/profile.jpg" alt="Yangyang Li portrait" />
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>About</h2>
+
+          <p>
+            Hi! I’m <strong>Yangyang (Annie) Li</strong>, a senior at the
+            <strong>Massachusetts Institute of Technology</strong>, double-majoring in
+            <strong>Computer Science, Economics &amp; Data Science (6-14)</strong> and
+            <strong>Business Analytics (15-2)</strong>. An award-winning researcher
+            (<em>Bain Cup Finalist</em>, <em>Regeneron STS Scholar</em>,
+            <em>MSEF 2nd Place</em>, <em>Google Code Jam Top 1000</em>), I’m fascinated by
+            how learning systems can reason, adapt, and stay reliable under uncertainty.
+          </p>
+    
+          <p>
+            My current research centers on <strong>robust and adaptive intelligence</strong>.
+            I developed <strong>DRO-InstructZero</strong>, a distributionally robust
+            Bayesian-optimization framework for <strong>Large Language Models</strong> that
+            explicitly maximizes worst-case reliability under domain shift—bridging robustness
+            theory with prompt alignment. This work, under review at ICLR 2026, establishes a
+            principled connection between <strong>distributionally robust optimization</strong>
+            and instruction learning.
+          </p>
+    
+          <p>
+            In parallel, I co-authored <strong>Adaptive Virtual Model Control with LLM- and
+            Lyapunov-based Reinforcement Learning</strong>, recently submitted to ICASSP 2026.
+            The study combines <strong>large-language-model guidance</strong> with
+            <strong>Lyapunov-constrained RL</strong> to achieve physically interpretable yet
+            stability-guaranteed robotic control—demonstrating that semantic reasoning from
+            LLMs can enhance safe adaptation in real-time machine control.
+          </p>
+    
+          <p>
+            Across both lines of work—from robust LLM optimization to adaptive robotics
+            control—my goal is to design learning systems that
+            <strong>remain trustworthy when the world changes</strong>. I hope to pursue a Ph.D.
+            that advances <strong>reinforcement learning, Bayesian optimization, and AI robustness</strong>
+            toward more reliable and interpretable intelligence.
+          </p>
+        </div>
+        
     </section>
 
-    <!-- ✅ Only ONE About section lives in MAIN -->
-    <section id="about" class="section">
-      <h2>About</h2>
-
-      <p>
-        Hi! I’m <strong>Yangyang (Annie) Li</strong>, a senior at the
-        <strong>Massachusetts Institute of Technology</strong>, double-majoring in
-        <strong>Computer Science, Economics &amp; Data Science (6-14)</strong> and
-        <strong>Business Analytics (15-2)</strong>. An award-winning researcher
-        (<em>Bain Cup Finalist</em>, <em>Regeneron STS Scholar</em>,
-        <em>MSEF 2nd Place</em>, <em>Google Code Jam Top 1000</em>), I’m fascinated by
-        how learning systems can reason, adapt, and stay reliable under uncertainty.
-      </p>
-
-      <p>
-        My current research centers on <strong>robust and adaptive intelligence</strong>.
-        I developed <strong>DRO-InstructZero</strong>, a distributionally robust
-        Bayesian-optimization framework for <strong>Large Language Models</strong> that
-        explicitly maximizes worst-case reliability under domain shift—bridging robustness
-        theory with prompt alignment. This work, under review at ICLR 2026, establishes a
-        principled connection between <strong>distributionally robust optimization</strong>
-        and instruction learning.
-      </p>
-
-      <p>
-        In parallel, I co-authored <strong>Adaptive Virtual Model Control with LLM- and
-        Lyapunov-based Reinforcement Learning</strong>, recently submitted to ICASSP 2026.
-        The study combines <strong>large-language-model guidance</strong> with
-        <strong>Lyapunov-constrained RL</strong> to achieve physically interpretable yet
-        stability-guaranteed robotic control—demonstrating that semantic reasoning from
-        LLMs can enhance safe adaptation in real-time machine control.
-      </p>
-
-      <p>
-        Across both lines of work—from robust LLM optimization to adaptive robotics
-        control—my goal is to design learning systems that
-        <strong>remain trustworthy when the world changes</strong>. I hope to pursue a Ph.D.
-        that advances <strong>reinforcement learning, Bayesian optimization, and AI robustness</strong>
-        toward more reliable and interpretable intelligence.
-      </p>
+    <!-- SELECTED PUBLICATIONS -->
+    <section id="publications" class="section">
+      <h2>Selected Publications</h2>
+      
+      <div class="pub-list">
+    
+        <!-- ==== PUB ITEM 1 ==== -->
+        <article class="pub">
+          <img class="pub-thumb" src="img/papers/dro-instructzero.png" alt="DRO-InstructZero thumbnail">
+          <div>
+            <h3 class="pub-title">
+              DRO-InstructZero: Distributionally Robust Bayesian Optimization for Large Language Models
+            </h3>
+            <p class="pub-authors">
+              <a href="#">Yangyang (Annie) Li</a>
+            </p>
+            <p class="pub-venue">
+              ICLR 2026 (under review)
+            </p>
+            <div class="pub-actions">
+              <a class="btn-mini" href="LINK_TO_ABS">ABS</a>
+              <a class="btn-mini" href="LINK_TO_ARXIV">ARXIV</a>
+              <a class="btn-mini" href="LINK_TO_CODE">CODE</a>
+              <a class="btn-mini" href="LINK_TO_WEBSITE">WEBSITE</a>
+            </div>
+          </div>
+        </article>
+    
+        <!-- ==== PUB ITEM 2 ==== -->
+        <article class="pub">
+          <img class="pub-thumb" src="img/papers/avmc-llm-lyap.png" alt="Adaptive Virtual Model Control thumbnail">
+          <div>
+            <h3 class="pub-title">
+              Adaptive Virtual Model Control with LLM- and Lyapunov-based Reinforcement Learning
+            </h3>
+            <p class="pub-authors">
+              <a href="#">Yangyang (Annie) Li</a>, Coauthor C, Coauthor D
+            </p>
+            <p class="pub-venue">
+              ICASSP 2026 <span class="tag">(Submitted)</span>
+            </p>
+            <div class="pub-actions">
+              <a class="btn-mini" href="LINK_TO_ABS2">ABS</a>
+              <a class="btn-mini" href="LINK_TO_ARXIV2">ARXIV</a>
+              <a class="btn-mini" href="LINK_TO_CODE2">CODE</a>
+              <a class="btn-mini" href="LINK_TO_WEBSITE2">WEBSITE</a>
+            </div>
+          </div>
+        </article>
+    
+        <!-- ==== Duplicate the block above for more papers ==== -->
+    
+      </div>
     </section>
+
 
     <section id="contact" class="section">
       <h2>Contact</h2>
@@ -122,3 +180,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
