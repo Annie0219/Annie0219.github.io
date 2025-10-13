@@ -50,7 +50,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
 
 /* turns solid black once user scrolls past the hero */
 .nav.solid {
-  height: 80px;
+  height: 85px;
   background: rgba(0, 0, 0, .9);
   box-shadow: 0 1px 0 rgba(255, 255, 255, .06);
 }
@@ -70,8 +70,11 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   text-decoration: none;
   font-weight: 800;
   letter-spacing: .8px;
+  padding-bottom: 4px;
   font-size: 36px;
   line-height: 1;
+  top: 2px;                         /* ⬆ move text upward slightly */
+  position: relative;
   transition: transform .25s ease, opacity .25s ease;
 }
 
