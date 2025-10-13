@@ -391,16 +391,20 @@ label.btn-mini {
   margin-left: -10px;
 }
 
+/* force size override */
 .about-photo img {
-  width: 100%;
-  max-width: 300px;        /* Limit width */
-  height: auto;            /* Preserve aspect ratio */
+  width: auto !important;        /* override global img width */
+  max-width: 300px !important;   /* limit width on desktop */
+  height: auto !important;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   object-fit: cover;
-  aspect-ratio: 2 / 3;     /* Keep portrait shape */
+  aspect-ratio: 2 / 3;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   transition: all 0.25s ease-in-out;
-    margin-bottom: 12px;          /* adds space before icons */
 }
 
 /* Responsive collapse for small screens */
@@ -419,7 +423,9 @@ label.btn-mini {
     margin-left: 0;
     margin-right: auto;
   }
-  .about-photo img{max-width:280px}
+  .about-photo img {
+    max-width: 240px !important;  /* smaller on mobile */
+  }
 }
 
 /* Reduce space between About & Publications */
