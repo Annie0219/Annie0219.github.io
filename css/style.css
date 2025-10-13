@@ -59,14 +59,14 @@ h1, h2, h3, h4, h5, h6, .brand {
   left: 0;
   right: 0;
   z-index: 50;
-  height: 90px;
+  height: 85px;
   background: transparent;
   transition: height .25s ease, background-color .25s ease, box-shadow .25s ease;
 }
 
 /* turns solid black once user scrolls past the hero */
 .nav.solid {
-  height: 85px;
+  height: 75px;
   background: rgba(0, 0, 0, .9);
   box-shadow: 0 1px 0 rgba(255, 255, 255, .06);
 }
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6, .brand {
   padding-bottom: 6px;
   font-size: 36px;
   line-height: 1;
-  top: 6px;                         /* ⬆ move text upward slightly */
+  top: 2px;                         /* ⬆ move text upward slightly */
   position: relative;
   transition: transform .25s ease, opacity .25s ease;
 }
@@ -189,11 +189,15 @@ h1, h2, h3, h4, h5, h6, .brand {
   padding:80px 24px;
   background:var(--bg);
   color:var(--fg);
+  font-family: 'Inter', sans-serif; 
 }
+
 .section h2{
   margin:0 0 8px 0;
   border-bottom:1px solid rgba(0,0,0,.1);
   padding-bottom:6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
 /* ensure in-page links (#about, #news) aren't hidden under the fixed nav */
