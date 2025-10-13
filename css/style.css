@@ -185,6 +185,14 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   padding-bottom:6px;
 }
 
+/* ensure in-page links (#about, #news) aren't hidden under the fixed nav */
+.section { scroll-margin-top: var(--navH-shrink); }
+
+/* just in case there was negative stacking: keep hero above, content below */
+.hero { position: relative; z-index: 1; }
+.section { position: relative; z-index: 0; }
+
+
 
 
 
