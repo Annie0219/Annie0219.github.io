@@ -156,10 +156,18 @@
               ICLR 2026 (under review)
             </p>
             <div class="pub-actions">
-              <a class="btn-mini" href="LINK_TO_ABS">ABS</a>
+              <label for="abs1" class="btn-mini">ABS</label>
               <a class="btn-mini" href="LINK_TO_ARXIV">ARXIV</a>
               <a class="btn-mini" href="LINK_TO_CODE">CODE</a>
               <a class="btn-mini" href="LINK_TO_WEBSITE">WEBSITE</a>
+            </div>
+
+            <!-- Hidden checkbox toggle -->
+            <input type="checkbox" id="abs1" class="abs-checkbox">
+            <div class="abstract-box">
+              <p>
+                Large language models are highly sensitive to prompt wording. However, popular automatic prompt search methods, including InstructZero, often degrade under distribution shift and adversarial evaluation because they optimize expected performance under a single evaluation distribution. Consequently, prompts that work in one setting frequently fail to transfer. To address this, DRO-InstructZero formulates zero-shot prompt optimization as robust Bayesian optimization. Specifically, an f-divergence ball defines an ambiguity set around the evaluation distribution, and a robust acquisition rule maximizes worst-case expected utility while retaining the query efficiency of Bayesian search. Therefore, the search explicitly targets reliability under distribution shift rather than average behavior alone. Experiments follow the instruction-induction protocol with matched query budgets across formality rewriting, code debugging, and translation. For example, on BIG-Bench informative-to-formal rewriting, accuracy improves from 61.3 ± 0.7% to approximately 85–90%, yielding an absolute gain of about 25–30 points. Moreover, auto-debugging shows about +25-point gains under domain shift. Meanwhile, stable tasks such as cause-and-effect remain above 96%, indicating no loss on in-distribution cases. Furthermore, improvements are consistent across divergence choices and decoding temperatures. Overall, DRO-InstructZero connects distributionally robust optimization with prompt learning, offering a plug-and-play and general approach for reliable, transferable prompt alignment under real-world uncertainty.
+              </p>
             </div>
           </div>
         </article>
@@ -178,10 +186,18 @@
               ICASSP 2026 <span class="tag">(Submitted)</span>
             </p>
             <div class="pub-actions">
-              <a class="btn-mini" href="LINK_TO_ABS2">ABS</a>
+              <label for="abs1" class="btn-mini">ABS</label>
               <a class="btn-mini" href="LINK_TO_ARXIV2">ARXIV</a>
               <a class="btn-mini" href="LINK_TO_CODE2">CODE</a>
               <a class="btn-mini" href="LINK_TO_WEBSITE2">WEBSITE</a>
+            </div>
+
+            <!-- Hidden checkbox toggle -->
+            <input type="checkbox" id="abs1" class="abs-checkbox">
+            <div class="abstract-box">
+              <p>
+                Robotic arms are increasingly deployed in uncertain environments, yet conventional control pipelines often become rigid and brittle when exposed to perturbations or incomplete information. Virtual Model Control (VMC) enables compliant behaviors by embedding virtual forces and mapping them into joint torques, but its reliance on fixed parameters and limited coordination among virtual components constrains adaptability and may undermine stability as task objectives evolve. To address these limitations, we propose Adaptive Virtual Model Control with LLM and Lyapunov-Based Reinforcement Learning (RL), which preserves the physical interpretability of VMC while supporting stability-guaranteed online adaptation. Large language models (LLMs) provide structured priors and high-level reasoning that enhance coordination among virtual components, improve sample efficiency, and facilitate flexible adjustment to varying task requirements. Complementarily, Lyapunov-based RL enforces theoretical stability constraints, ensuring safe and reliable adaptation under uncertainty. Extensive simulations on a 7-DoF Panda arm demonstrate that our approach effectively balances competing objectives in dynamic tasks, achieving superior performance while highlighting the synergistic benefits of LLM guidance and Lyapunov-constrained adaptation.
+              </p>
             </div>
           </div>
         </article>
@@ -230,7 +246,7 @@
               ACAI, 2021
             </p>
             <div class="pub-actions">
-              <a class="btn-mini" href="LINK_TO_ABS2">ABS</a>
+              <label for="abs1" class="btn-mini">ABS</label>
               <a class="btn-mini" href="LINK_TO_ARXIV2">ARXIV</a>
               <a class="btn-mini" href="LINK_TO_CODE2">CODE</a>
               <a class="btn-mini" href="LINK_TO_WEBSITE2">WEBSITE</a>
@@ -260,10 +276,18 @@
               ICA, 2021
             </p>
             <div class="pub-actions">
-              <a class="btn-mini" href="LINK_TO_ABS2">ABS</a>
+              <label for="abs1" class="btn-mini">ABS</label>
               <a class="btn-mini" href="LINK_TO_ARXIV2">ARXIV</a>
               <a class="btn-mini" href="LINK_TO_CODE2">CODE</a>
               <a class="btn-mini" href="LINK_TO_WEBSITE2">WEBSITE</a>
+            </div>
+
+            <!-- Hidden checkbox toggle -->
+            <input type="checkbox" id="abs1" class="abs-checkbox">
+            <div class="abstract-box">
+              <p>
+                This paper introduces an autonomous robot (AR) cart to execute the last mile delivery task. We use navigation and intelligent avoidance algorithms to plan the path of the automatic robot. When AR encounters a new unrecognizable terrain, it will give control to the customer who can control the AR on its mobile app and navigate to the specified destination. We have initially designed an autonomous delivery robot with the cost of 2774 dollars.
+              </p>
             </div>
           </div>
         </article>
