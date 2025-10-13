@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, .brand {
 .btn-mini {
   font-size: 0.86rem;
   padding: 6px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #111;
   border-radius: 6px;
   text-decoration: none;
   color: #111;
