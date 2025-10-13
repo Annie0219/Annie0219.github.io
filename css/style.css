@@ -268,11 +268,11 @@ h1, h2, h3, h4, h5, h6, .brand {
 
 .about-photo {
   flex: 0 0 300px;
-  margin-left:-10px;       /* subtle nudge left */
   display: flex;
-  flex-direction: column; /* ensures icons stay below image */
-  align-items: center;    /* center image + icons */
-  justify-content: flex-start;  /* ensures icons stay below image */
+  flex-direction: column; /* stack image + icons vertically */
+  align-items: center;    /* center horizontally */
+  justify-content: flex-start;
+  margin-left: -10px;
 }
 
 .about-photo img {
@@ -352,6 +352,7 @@ h1, h2, h3, h4, h5, h6, .brand {
   display: flex;
   justify-content: center;
   gap: 18px;
+  width: 100%;
 }
 
 .contact-icons a {
