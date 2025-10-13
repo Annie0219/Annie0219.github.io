@@ -222,6 +222,15 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-appl
   .pub-thumb{width:100px;height:72px}
 }
 
+.about-photo img {
+  width: 100%;
+  max-width: 260px;        /* Limit width */
+  height: auto;            /* Preserve aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  object-fit: cover;
+  aspect-ratio: 3 / 4;     /* Keep portrait shape */
+}
 
 
 
