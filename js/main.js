@@ -20,26 +20,28 @@ let delay = 0; // extra delay before deleting
 
 function tick() {
   const full = phrases[i];
-  el.textContent = full.slice(0, j) || " ";
+  const current = full.slice(0, j) || " ";
+  
+  // Show text normally while typing/deleting
+  el.innerHTML = current;
 
   if (!deleting && j < full.length) {
     j++; // typing forward
   } else if (deleting && j > 0) {
     j--; // deleting backward
   } else if (!deleting && j === full.length) {
-    // finished typing a full sentence — pause before deleting
-    delay = 1500; // ← increase this number (in ms) for longer pause
+    // finished typing full phrase
+    highlightWords();       // add colors ✨
+    delay = 1500;           // pause before deleting
     deleting = true;
   } else if (deleting && j === 0) {
-    // finished deleting — move to next phrase
     deleting = false;
-    i = (i + 1) % phrases.length;
+    i = (i + 1) % phrases.length; // move to next phrase
   }
 
-  // adjust speed: faster delete, slower type
   const speed = deleting ? 40 : 80;
   setTimeout(tick, delay || speed);
-  delay = 0; // reset delay after use
+  delay = 0;
 }
 
 
