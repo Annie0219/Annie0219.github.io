@@ -41,7 +41,7 @@ function tick() {
     // finished typing full verb → fade in highlight color
     verbSpan.style.transition = "color 0.8s ease";
     verbSpan.style.color = highlightColor;
-    delay = 1500; // pause before deleting
+    delay = 2000; // pause before deleting
     deleting = true;
   } else if (deleting && j === 0) {
     deleting = false;

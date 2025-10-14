@@ -498,5 +498,9 @@ label.btn-mini {
   line-height: 1.4;
 }
 
-
-
+sup {
+  font-size: 0.7em;
+  vertical-align: super;
+  color: #555; /* soft grey for elegance */
+  margin-left: 1px;
+}
