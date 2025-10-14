@@ -7,6 +7,14 @@ const phrases = [
   "I research Human & Machines."
 ];
 
+// Define which words to highlight and their colors
+const highlights = {
+  "optimize": "#b30000",   // crimson
+  "align": "#2b66c3",    // deep blue
+  "explore": "#00897b",       // teal
+  "Machines": "#c43d00"          // orange accent
+};
+
 let i = 0, j = 0, deleting = false;
 let delay = 0; // extra delay before deleting
 
@@ -20,7 +28,7 @@ function tick() {
     j--; // deleting backward
   } else if (!deleting && j === full.length) {
     // finished typing a full sentence — pause before deleting
-    delay = 1200; // ← increase this number (in ms) for longer pause
+    delay = 1500; // ← increase this number (in ms) for longer pause
     deleting = true;
   } else if (deleting && j === 0) {
     // finished deleting — move to next phrase
@@ -32,6 +40,19 @@ function tick() {
   const speed = deleting ? 40 : 80;
   setTimeout(tick, delay || speed);
   delay = 0; // reset delay after use
+}
+
+
+function highlightWords() {
+  let html = el.innerHTML;
+  for (const [word, color] of Object.entries(highlights)) {
+    const regex = new RegExp(`\\b${word}\\b`, "gi");
+    html = html.replace(
+      regex,
+      `<span style="color:${color}; font-weight:600;">$&</span>`
+    );
+  }
+  el.innerHTML = html;
 }
 
 tick();
