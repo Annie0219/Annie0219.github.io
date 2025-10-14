@@ -8,18 +8,32 @@ const phrases = [
 ];
 
 let i = 0, j = 0, deleting = false;
+let delay = 0; // extra delay before deleting
 
 function tick() {
   const full = phrases[i];
   el.textContent = full.slice(0, j) || " ";
-  if (!deleting && j < full.length) j++;
-  else if (deleting && j > 0) j--;
-  else {
-    deleting = !deleting;
-    if (!deleting) i = (i + 1) % phrases.length;
+
+  if (!deleting && j < full.length) {
+    j++; // typing forward
+  } else if (deleting && j > 0) {
+    j--; // deleting backward
+  } else if (!deleting && j === full.length) {
+    // finished typing a full sentence — pause before deleting
+    delay = 1200; // ← increase this number (in ms) for longer pause
+    deleting = true;
+  } else if (deleting && j === 0) {
+    // finished deleting — move to next phrase
+    deleting = false;
+    i = (i + 1) % phrases.length;
   }
-  setTimeout(tick, deleting ? 40 : 80);
+
+  // adjust speed: faster delete, slower type
+  const speed = deleting ? 40 : 80;
+  setTimeout(tick, delay || speed);
+  delay = 0; // reset delay after use
 }
+
 tick();
 
 
