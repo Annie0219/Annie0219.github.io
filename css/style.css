@@ -1,4 +1,120 @@
-:root { --fg:#111; --muted:#666; --accent:#fff; }
+/* === ROOT VARIABLES === */
+:root {
+  --fg: #111;                /* main text color */
+  --bg: #ffffff;             /* background */
+  --muted: #666;             /* muted text */
+  --accent: #b30000;         /* accent red */
+  --hover: rgba(255, 255, 255, 0.15); /* nav hover */
+  --navH: 78px;
+  --navH-shrink: 54px;
+}
+
+/* === GLOBAL RESET === */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* === GLOBAL FONT SETTINGS === */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+               Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+/* === HEADINGS === */
+h1, h2, h3, h4, h5, h6, .brand {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/* === GENERAL LAYOUT === */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+header {
+  padding-top: 40px;
+}
+
+h1 {
+  margin: 0 0 6px 0;
+  font-size: 34px;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+/* === NAVIGATION === */
+nav a {
+  margin-right: 14px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: color 0.25s ease;
+}
+nav a:hover {
+  color: var(--accent);
+}
+
+/* === SECTION HEADINGS === */
+h2 {
+  margin-top: 32px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+
+/* === PUBLICATION CARDS === */
+.pub {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin: 16px 0;
+}
+
+.pub img {
+  width: 120px;
+  height: 80px;
+  background: #eee;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* === BUTTONS === */
+.btn {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-right: 8px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: all 0.25s ease-in-out;
+}
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* === SMALL TEXT === */
+.small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
+/* :root { --fg:#111; --muted:#666; --accent:#fff; }
 *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial}
 .container{max-width:900px;margin:auto;padding:24px}
 header{padding-top:40px}
@@ -11,7 +127,7 @@ h2{margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}
 .pub img{width:120px;height:80px;background:#eee;object-fit:cover}
 .btn{border:1px solid #ddd;border-radius:4px;padding:3px 8px;margin-right:8px;text-decoration:none;color:var(--fg)}
 .btn:hover{border-color:var(--accent)}
-.small{color:var(--muted);font-size:13px}
+.small{color:var(--muted);font-size:13px} */
 
 
 /* Light Backgroud */
