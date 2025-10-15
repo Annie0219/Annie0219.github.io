@@ -113,23 +113,6 @@ h2 {
   font-size: 13px;
 }
 
-
-/* :root { --fg:#111; --muted:#666; --accent:#fff; }
-*{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial}
-.container{max-width:900px;margin:auto;padding:24px}
-header{padding-top:40px}
-h1{margin:0 0 6px 0;font-size:34px}
-.tagline{color:var(--muted);margin:0 0 14px}
-nav a{margin-right:14px;text-decoration:none;color:var(--fg)}
-nav a:hover{color:var(--accent)}
-h2{margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}
-.pub{display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:start;margin:16px 0}
-.pub img{width:120px;height:80px;background:#eee;object-fit:cover}
-.btn{border:1px solid #ddd;border-radius:4px;padding:3px 8px;margin-right:8px;text-decoration:none;color:var(--fg)}
-.btn:hover{border-color:var(--accent)}
-.small{color:var(--muted);font-size:13px} */
-
-
 /* Light Backgroud */
 :root{
   --fg:#111;             /* text color */
@@ -474,7 +457,6 @@ label.btn-mini {
 }
 
 
-
 /* === ABOUT SECTION LAYOUT === */
 .about-container {
   display: flex;
@@ -484,20 +466,29 @@ label.btn-mini {
   max-width: 1100px;
   margin: 0 auto;
   padding-top: 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #111;
+  line-height: 1.6;
 }
 
+/* === ABOUT TEXT === */
 .about-text {
   flex: 1 1 0;
   min-width: 320px;
+  font-family: 'Inter', sans-serif;
+  color: #111;
 }
 
 .about-text h2 {
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
+  font-weight: 700;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
 }
 
+/* === ABOUT PHOTO === */
 .about-photo {
   flex: 0 0 300px;
   display: flex;
@@ -505,12 +496,13 @@ label.btn-mini {
   align-items: center;    /* center horizontally */
   justify-content: flex-start;
   margin-left: -10px;
+  font-family: 'Inter', sans-serif;
 }
 
-/* force size override */
+/* Force image size & style */
 .about-photo img {
-  width: auto !important;        /* override global img width */
-  max-width: 300px !important;   /* limit width on desktop */
+  width: auto !important;
+  max-width: 300px !important;
   height: auto !important;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
@@ -523,38 +515,37 @@ label.btn-mini {
   transition: all 0.25s ease-in-out;
 }
 
-/* Responsive collapse for small screens */
+/* === RESPONSIVE LAYOUT === */
 @media (max-width: 900px) {
   .about-container {
-    /* flex-direction: column-reverse; */
+    flex-direction: column;
     align-items: center;
-    flex-direction:column;
-    gap:18px;
+    gap: 18px;
   }
+
   .about-photo {
     margin-bottom: 1rem;
-    margin-top: 1.5rem;    /* tighter connection with About */
+    margin-top: 1.5rem;
     padding-top: 0;
     max-width: 1100px;
     margin-left: 0;
     margin-right: auto;
   }
+
   .about-photo img {
-    max-width: 240px !important;  /* smaller on mobile */
+    max-width: 240px !important;
   }
 }
 
-/* Reduce space between About & Publications */
+/* === REDUCE SPACE BETWEEN ABOUT & PUBLICATIONS === */
 .about-section {
-  margin-bottom: 0;      /* remove large spacing below About */
+  margin-bottom: 0;
 }
-
 
 /* Tighten spacing below About photo & Publications */
 .section + .pubs-section {
   margin-top: 1rem;
 }
-
 
 /* === CONTACT ICONS BELOW PHOTO === */
 .contact-icons {
@@ -572,51 +563,39 @@ label.btn-mini {
 }
 
 .contact-icons a:hover {
-  color: #b30000;        /* brighter red on hover */
-  transform: scale(1.15) translateY(-3px); /* subtle lift animation */
+  color: #b30000;
+  transform: scale(1.15) translateY(-3px);
 }
 
-
-/* Responsive stacking for smaller screens */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-photo {
-    margin-left: 0;
-  }
-
-  .about-photo img {
-    max-width: 280px;
-  }
-}
-
+/* === ABOUT INFO (TEXT BELOW PHOTO) === */
 .about-info {
   text-align: center;
-  /* margin-top: 14px; */
   margin-top: 18px;
   margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+  color: #111;
 }
 
 .about-info .name {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #111; /* black text like name headers */
+  color: #111;
   margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
 }
 
 .about-info .subtitle {
   font-size: 1rem;
-  color: #777; /* light grey text */
+  color: #777;
   margin: 2px 0;
   line-height: 1.4;
+  font-family: 'Inter', sans-serif;
 }
 
+/* === SUPERSCRIPTS === */
 sup {
   font-size: 0.7em;
   vertical-align: super;
-  color: #555; /* soft grey for elegance */
+  color: #555;
   margin-left: 1px;
 }
