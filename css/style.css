@@ -78,18 +78,23 @@ h2 {
 /* === PUBLICATION CARDS === */
 .pub {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 12px;
+  grid-template-columns: 180px 1fr;  /* wider column for bigger image */
+  gap: 16px;
   align-items: start;
-  margin: 16px 0;
+  margin: 18px 0;
 }
 
 .pub img {
-  width: 120px;
-  height: 80px;
+  width: 180px;       /* increase width */
+  height: 120px;      /* increase height */
   background: #eee;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: transform 0.5s ease;  /* subtle hover zoom */
+}
+
+.pub img:hover {
+  transform: scale(1.03);
 }
 
 /* === BUTTONS === */
