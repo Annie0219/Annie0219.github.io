@@ -559,22 +559,24 @@ label.btn-mini {
   transform: scale(1.15) translateY(-3px);
 }
 
-/* --- CV text version --- */
+
+/* --- CV text styling --- */
 .cv-text {
-  font-size: 28px;               /* visually balanced with icons */
-  font-weight: 700;
   font-family: 'Inter', sans-serif;
+  font-size: 32px;          /* slightly larger for balance */
+  font-weight: 800;         /* bolder text */
   color: #7b1c1c;
-  line-height: 1;                /* removes extra vertical padding */
+  line-height: 1;
+  text-decoration: none !important; /* double protection */
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  transform: translateY(2px); /* visually aligns with circular icons */
 }
 
 .cv-text:hover {
   color: #b30000;
-  transform: scale(1.15) translateY(-3px);
+  transform: scale(1.15) translateY(-1px); /* slight lift */
 }
 
 /* === ABOUT INFO (TEXT BELOW PHOTO) === */
