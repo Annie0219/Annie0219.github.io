@@ -552,6 +552,7 @@ label.btn-mini {
   color: #7b1c1c; /* deep academic red */
   font-size: 40px;
   transition: all 0.3s ease;
+  text-decoration: none !important; /* ensure NO underline for any link */
 }
 
 .contact-icons a:hover {
@@ -571,6 +572,10 @@ label.btn-mini {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none !important; /* double protection */
+  border: none !important;
+  outline: none !important;
+  background: none;
   transform: translateY(2px); /* visually aligns with circular icons */
 }
 
