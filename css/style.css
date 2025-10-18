@@ -564,8 +564,8 @@ label.btn-mini {
 /* --- CV text styling --- */
 .cv-text {
   font-family: 'Inter', sans-serif;
-  font-size: 40px;          /* slightly larger for balance */
-  font-weight: 800;         /* bolder text */
+  font-size: 42px;           /* increased to match icon height */
+  font-weight: 800;          /* bold for equal visual weight */
   color: #7b1c1c;
   line-height: 1;
   text-decoration: none !important; /* double protection */
