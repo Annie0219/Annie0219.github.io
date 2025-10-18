@@ -559,6 +559,29 @@ label.btn-mini {
   transform: scale(1.15) translateY(-3px);
 }
 
+/* make the CV text match the icon style */
+.cv-btn {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  color: #7b1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #7b1c1c;
+  transition: all 0.25s ease;
+}
+
+.cv-btn:hover {
+  color: #fff;
+  background: #b30000;
+  transform: scale(1.15) translateY(-3px);
+}
+
 /* === ABOUT INFO (TEXT BELOW PHOTO) === */
 .about-info {
   text-align: center;
