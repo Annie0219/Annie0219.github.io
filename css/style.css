@@ -153,9 +153,10 @@ h1, h2, h3, h4, h5, h6, .brand {
 
 /* turns solid black once user scrolls past the hero */
 .nav.solid {
-  height: 75px;
+  /* height: 75px; */
   background: rgba(0, 0, 0, .9);
   box-shadow: 0 1px 0 rgba(255, 255, 255, .06);
+  transition: background-color .25s ease, box-shadow .25s ease;
 }
 
 .nav-inner {
@@ -166,6 +167,11 @@ h1, h2, h3, h4, h5, h6, .brand {
   align-items: center;
   justify-content: space-between;
   padding: 6px 20px;
+}
+
+.nav.solid .nav-inner {
+  padding: 14px 20px; /* give breathing room inside the shrunken bar */
+  align-items: center; /* ensure it stays vertically centered */
 }
 
 .brand {
@@ -182,7 +188,9 @@ h1, h2, h3, h4, h5, h6, .brand {
 }
 
 .nav.solid .brand {
-  transform: translateY(0) scale(.92);
+  top: -2px;               /* reset offset from transparent state */
+  transform: scale(.92) translateY(-1px); /* keep centered after scaling */
+  /* transform: translateY(0) scale(.92); */
   opacity: .9;
 }
 
