@@ -626,3 +626,41 @@ sup {
   color: #555;
   margin-left: 1px;
 }
+
+/* Add this to your main style.css */
+#news {
+  margin-top: 2em;
+}
+
+#news h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 1.2em;
+}
+
+.news-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: 2em;
+  margin-bottom: 1.8em;
+  align-items: start;
+}
+
+.news-date {
+  font-weight: 700;
+  color: #222;
+}
+
+.news-content {
+  color: #333;
+  line-height: 1.6;
+}
+
+.news-content a {
+  color: #a33;
+  text-decoration: none;
+}
+
+.news-content a:hover {
+  text-decoration: underline;
+}
