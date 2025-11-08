@@ -82,6 +82,8 @@ h2 {
   gap: 16px;
   align-items: start;
   margin: 18px 0;
+  margin-bottom: 0;
+  padding-bottom: 8px; /* tighten only this section’s bottom */
 }
 
 .pub img {
@@ -309,6 +311,8 @@ h1, h2, h3, h4, h5, h6, .brand {
   display: flex;
   flex-direction: column;
   gap: 12px; /* less space between each item */
+  margin-bottom: 0;
+  padding-bottom: 8px; /* tighten only this section’s bottom */
 }
 
 .pub {
@@ -436,6 +440,8 @@ label.btn-mini {
   /* margin: 1.5rem auto 0; */
   margin: 0 auto; 
   padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 8px; /* tighten only this section’s bottom */
 }
 
 .pubs-section h2 {
