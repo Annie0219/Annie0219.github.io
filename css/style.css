@@ -670,3 +670,10 @@ sup {
 .news-content a:hover {
   text-decoration: underline;
 }
+
+.tagline {
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #555;
+}
