@@ -673,7 +673,8 @@ sup {
 
 .tagline {
   margin-top: -10px;
-  margin-bottom: 15px;
-  font-size: 1.05rem;
-  color: #555;
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.55); /* light black */
 }
